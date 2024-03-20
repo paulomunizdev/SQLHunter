@@ -20,7 +20,11 @@ SQL Hunter is a powerful scanning tool designed to identify websites vulnerable 
    ```bash
    cd SQLHunter
    ```
-3. Run SQLHunter:
+3. Give permission to execute:
+   ```bash
+   sudo sudo chmod +x sqlhunter
+   ```
+4. Run SQLHunter:
    ```bash
    sudo ./sqlhunter
    ```
