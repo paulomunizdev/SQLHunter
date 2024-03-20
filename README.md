@@ -1,4 +1,4 @@
-# SQL Hunter - Websites Vulnerability Scanner
+# SQL Hunter 0.0.1 - Websites Vulnerability Scanner
 
 SQL Hunter is a powerful scanning tool designed to identify websites vulnerable to SQL injection attacks. By utilizing predefined search queries, known as "dorks," SQL Hunter searches the web for potential targets and then evaluates them for vulnerabilities.
 
