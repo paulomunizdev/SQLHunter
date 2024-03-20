@@ -372,10 +372,11 @@ int main() {
           res = performRequest(curl, search_query, response_buffer);
           if (res != CURLE_OK) {
             std::cerr << "Failed to execute HTTP request." << std::endl;
-            linksFile.close();
             curl_easy_cleanup(curl);
+            linksFile.close();
             return 1;
           }
+
           std::cout << "Links on page " << page + 1 << " for the dork \""
                     << dork << "\":" << std::endl;
           searchAndPrintLinks(response_buffer, linksFile);
