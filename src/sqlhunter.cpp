@@ -12,7 +12,7 @@
 #include <vector>
 #include <curl/curl.h>
 #include <regex>
-#include <unistd.h>				// For the sleep function
+#include <unistd.h>			// For the sleep function
 #include <sys/stat.h>			// For file permissions
 
 // Function for writing data received from curl
