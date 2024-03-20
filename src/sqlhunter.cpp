@@ -1,6 +1,6 @@
 /*
  * Title:       SQL Hunter
- * Version:     0.0.1
+ * Version:     0.1.1
  * Author:      Paulo Muniz
  * GitHub:      https://github.com/paulomunizdev/SQLHunter
  * Description: A scanning tool for identifying vulnerable websites using
@@ -192,7 +192,7 @@ int main() {
       "                          ))    \\#H\\       `'Y###\n"
       "                          ''     }#H)";
   std::cout << art << std::endl;
-  std::cout << "\nSQL Hunter - v0.0.1\n" << std::endl;
+  std::cout << "\nSQL Hunter - v0.1.1\n" << std::endl;
   std::cout << "" << std::endl;
   std::cout << "Before proceeding, please ensure you are using a proxy if "
                "necessary.\n"
@@ -300,6 +300,9 @@ int main() {
         std::cerr << "Error opening the 'vuln.txt' file." << std::endl;
         return 1;
       }
+      
+      // Change permissions of the "vuln.txt" file to allow editing
+      chmod("vuln.txt", S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH);
 
       std::string url;
       // Read URLs from the file until the end
@@ -348,8 +351,8 @@ int main() {
       }
       dorksFile.close();
       int numPages;
-      // Prompt user to enter the number of pages to scan
-      std::cout << "Enter the number of pages to scan: ";
+      // Prompt user to enter the number of google pages to scan
+      std::cout << "Enter the number of google pages to scan: ";
       std::cin >> numPages;
       CURL *curl;
       CURLcode res;
