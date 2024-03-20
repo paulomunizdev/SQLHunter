@@ -3,8 +3,7 @@
  * Version:     0.1.1
  * Author:      Paulo Muniz
  * GitHub:      https://github.com/paulomunizdev/SQLHunter
- * Description: A scanning tool for identifying vulnerable websites using
- * predefined dorks.
+ * Description: A scanning tool for identifying vulnerable websites using predefined dorks.
  */
 
 #include <curl/curl.h>
@@ -24,8 +23,7 @@
  * @param ptr              Pointer to the data received from curl.
  * @param size             Size of each data element.
  * @param nmemb            Number of data elements.
- * @param data             Pointer to a string buffer where the data will be
- * stored.
+ * @param data             Pointer to a string buffer where the data will be stored.
  * @return size_t          The total size of the data.
  */
 size_t writeFunction(char *ptr, size_t size, size_t nmemb, std::string *data) {
@@ -166,10 +164,8 @@ void searchAndPrintLinks(const std::string &html, std::ofstream &outputFile) {
  * @brief                  Function to perform HTTP request using CURL.
  * @param curl             Pointer to the CURL handle.
  * @param search_query     The URL or search query to be executed.
- * @param response_buffer  String buffer to store the response received from the
- * server.
- * @return CURLcode        CURL result code indicating the outcome of the
- * request.
+ * @param response_buffer  String buffer to store the response received from the server.
+ * @return CURLcode        CURL result code indicating the outcome of the request.
  */
 CURLcode performRequest(CURL *curl, const std::string &search_query,
                         std::string &response_buffer) {
