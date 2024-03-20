@@ -1,2 +1,2 @@
-index.php?id=
-strona.php?id=
+inurl:index.php?id=
+inurl:strona.php?id=
